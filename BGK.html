@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styling.css" />
+    <link rel="stylesheet" href="nav-link.css" />
+    <link rel="stylesheet" href="C:\Users\homepc\AppData\Local\Programs\Microsoft VS Code\bootstrap-5.2.0-beta1-dist\css\bootstrap.min.css"
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <title></title>
 </head>
 
@@ -32,110 +32,48 @@
                 <a class="nav-link" href="#">Pricing</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" >Disabled</a>
+                <a class="nav-link" href="C:/Users/homepc/OneDrive/Pictures/Mini Game/Games.html" >Games</a>
               </li>
             </ul>
-            
           </div>
         </div>
       </nav>
       <!--NAVBAR END-->
-      <br /><br />
+ 
+    <!--Jumbotron Start-->
+    <section class="jumbotron text-center">
+        <img src="C:/Users/homepc/OneDrive/Pictures/Mini Game/img/1.jpg" alt="Rose" width="200"
+        class="rounded-circle img-thumbnail" />
+        <h1 class="display-4">Rose</h1>
+        <p class="lead">Lecturer | Content Creator</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fffff" fill-opacity="1" d="M0,128L48,122.7C96,117,192,107,288,133.3C384,160,480,224,576,256C672,288,768,288,864,282.7C960,277,1056,267,1152,245.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        <section/>
+    <!--Jumbotron End-->
+      
+    <!--about Start-->
+          <section id="about">
+            <div class="container">
+              <div class="row text-center">
+                <div class="col">
+                  <h2>About Me</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, iure facilis necessitatibus eligendi eaque quaerat expedita amet modi quis odio laudantium iusto assumenda repudiandae earum sit. Quia dolorum ipsum nostrum.
+                  </p>
+                </div>
+              <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil qui harum maxime recusandae, modi assumenda natus deleniti? Repellendus optio molestias aliquid assumenda architecto, ipsum, blanditiis quidem aperiam veritatis ducimus nobis.
+                </p>
+                </div>
+            </div>
+          </section>
 
-    <div id="app">
-        <div class="summary">
-            <h1 class="title">MATCH RESULT<baground inputmode=""</h1>
-            <br />
-            <h1 id="inGame"></h1>
-            <h3 id="result"></h3>
-        </div>
-        <div class="games">
-            <div class="option" onclick="pickOption('🖐')">🖐</div>
-            <div class="option" onclick="pickOption('✌')">✌</div>
-            <div class="option" onclick="pickOption('✊')">✊</div>
-        </div>
-    </div>
-
-    <div></div>
-
-    <script>
-        class Start {
-             constructor() {
-                this.playerName = "Player"
-                this.botName = "HEHEHAHA"
-                this.playerOption;
-                this.botOption;
-                this.winner = ""
-            }
-
-            get getBotOption() {
-                return this.botOption;
-            }
-
-            set setBotOption(option) {
-                this.botOption = option;
-            }
-
-            get getPlayerOption() {
-                return this.playerOption
-            }
-
-            set setPlayerOption(option) {
-                this.playerOption = option;
-            }
-
-            botBrain() {
-                const option = ["🖐", "✌", "✊"];
-                const bot = option[Math.floor(Math.random() * option.length)];
-                return bot;
-            }
-
-            winCalculation() {
-                if (this.botOption == "🖐" && this.playerOption == "✌") {
-                    return this.winner = this.playerName
-                } else if (this.botOption == "🖐" && this.playerOption == "✊") {
-                    return this.winner = this.botName;
-                } else if (this.botOption == "✌" && this.playerOption == "🖐") {
-                    return this.winner = this.botName;
-                } else if (this.botOption == "✌" && this.playerOption == "✊") {
-                    return this.winner = this.playerName
-                } else if (this.botOption == "✊" && this.playerOption == "🖐") {
-                    return this.winner = this.playerName
-                } else if (this.botOption == "✊" && this.playerOption == "✌") {
-                    return this.winner = this.botName;
-                } else {
-                    return this.winner = "SERI"
-                }
-            }
-
-            matchResult() {
-                if (this.winner != "SERI") {
-                    return `${this.winner} MENANG!`;
-                } else {
-                    return `WAAA ${this.winner}, GAK ADA YG MENANG 🤪`;
-                }
-            }
-        }
-
-        function pickOption(params) {
-            const start = new Start();
-            start.setPlayerOption = params;
-            start.setBotOption = start.botBrain();
-            start.winCalculation();
-
-            const inGame = document.getElementById("inGame");
-            const result = document.getElementById("result");
-
-            inGame.textContent = "..."
-            result.textContent = "..."
-
-            setTimeout(() => {
-                inGame.textContent = `${start.getPlayerOption} VS ${start.getBotOption}`
-                result.textContent = start.matchResult();
-            }, 1500);
-
-        }
-    </script>
+    <!--about End-->
 </body>
 
 </html>
